@@ -1,0 +1,181 @@
+/* --- BARRA DE NAVEGACIÓN --- */
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.texto-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #b13ea9;
+}
+
+.resalte-logo {
+  color: #b13ea9;
+}
+
+.botones-navegacion button {
+  margin-left: 15px;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn-entrar {
+  background-color: transparent;
+  color: #b13ea9;
+  border: 2px solid #b13ea9!important;
+}
+
+.btn-entrar:hover {
+  background-color: #f0f5f8;
+}
+
+.btn-registrarme {
+  background-color: #b13ea9;
+  color: white;
+}
+
+.btn-registrarme:hover {
+  background-color: #b13ea9;
+}
+
+/* --- SECCIÓN HERO --- */
+.seccion-hero {
+  background-image: url('C:\Users\minyo\Desktop\proyecto_cecy_eats\proyecto_cecy_eats\src\assets\WhatsApp Image 2026-06-17 at 9.21.34 PM.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+}
+
+.capa-oscura {
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido-hero {
+  color: #b13ea9;
+  padding: 20px;
+}
+
+.contenido-hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.contenido-hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-ver-menu {
+  background-color: #b13ea9;
+  color: #333;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.btn-ver-menu:hover {
+  background-color: #b13ea9;
+  transform: scale(1.05);
+}
+
+/* --- SECCIÓN INFORMATIVA --- */
+.seccion-informativa {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.seccion-informativa h2 {
+  font-size: 28px;
+  color: #ba3ad6;
+  margin-bottom: 40px;
+}
+
+.cuadricula-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tarjeta-info {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.icono-info {
+  font-size: 40px;
+  color: #b13ea9;
+  margin-bottom: 15px;
+}
+
+.tarjeta-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tarjeta-info p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* --- PIE DE PÁGINA --- */
+.pie-pagina {
+  background-color: #b13ea9;
+  color: #bacddb;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contenido-pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.enlaces-pie a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.enlaces-pie a:hover {
+  text-decoration: underline;
+}
