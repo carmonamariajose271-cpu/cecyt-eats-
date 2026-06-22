@@ -125,4 +125,4 @@ export const actualizarEstadoPedido = async (id, estado_pedido) => {
   } catch (err) { 
     return { error: err.message }; 
   } 
-};
+}; 

@@ -1,19 +1,19 @@
 import React from 'react'; 
-  
+
 function TarjetaProducto({ producto, alAgregarAlCarrito }) { 
-  // Desestructuramos las propiedades del objeto producto 
+
   const { 
     nombre_producto, descripcion, 
     precio, stock, estado_disponible, imagen 
-  } = producto; 
-  console.log("Imagen:", imagen);
-console.log("Ruta:", /img/+{imagen});
+  } = producto;
+  
+  
   return ( 
     <div className='tarjeta-producto'> 
   
       
       <img
-  src={"/img/${imagen?.trim()}"}
+  src={"/img/"+imagen}
   alt={nombre_producto}
   className="imagen-producto"
 />

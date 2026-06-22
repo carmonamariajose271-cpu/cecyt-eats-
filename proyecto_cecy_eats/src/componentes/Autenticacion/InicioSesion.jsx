@@ -28,7 +28,7 @@ function InicioSesion({ alCambiarARegistro, alIniciarSesionExitoso }) {
       return; 
     } 
   
-    // Guardar sesión en localStorage (solo el objeto usuario, sin contraseña) 
+    // Guardar sesión en localStorage (solo el objeto usuario, sin }contraseña) 
     localStorage.setItem('usuarioActivo', 
 JSON.stringify(respuesta.usuario)); 
     alIniciarSesionExitoso(respuesta.usuario); 

@@ -1,6 +1,6 @@
 // src/componentes/PanelAdmin/PanelAdmin.jsx 
 import React, { useState, useEffect } from 'react'; 
-import TablaOrdenes from './TablaOrdenes.jsx'; 
+import TablaOrdenes       from './TablaOrdenes'; 
 import FormularioProducto from './FormularioProducto'; 
 import './PanelAdmin.css'; 
 import { 
@@ -36,9 +36,7 @@ function PanelAdmin({ usuarioActivo, alCerrarSesion }) {
   }, []); 
   
   // ── MÉTRICAS DEL DASHBOARD ────────────────────────────────────── 
-
   const pedidosPendientes = pedidos.filter( 
-
     p => p.estado_pedido === 'Pendiente' 
   ).length; 
   
@@ -215,8 +213,13 @@ agotados</span>
                     <td>{prod.stock}</td> 
                     <td> 
                       <span className={ 
-                        prod.estado_disponible && prod.estado_disponible  !== 0? 'badge-disponible': 'badge-agotado' }> 
-                        {prod.estado_disponible && prod.estado_disponible !== 0 ? 'Sí' : 'No'} 
+                        prod.estado_disponible && prod.estado_disponible 
+!== 0 
+                          ? 'badge-disponible' 
+                          : 'badge-agotado' 
+                      }> 
+                        {prod.estado_disponible && prod.estado_disponible 
+!== 0 ? 'Sí' : 'No'} 
                       </span> 
                     </td> 
                     <td className='celda-acciones'> 
