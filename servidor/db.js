@@ -14,6 +14,6 @@ const conexion = mysql.createPool({
 // Probar la conexión al iniciar 
 conexion.getConnection() 
   .then(() => console.log('✔ Conectado a MySQL (XAMPP)')) 
-  .catch(err => console.error('✖ Error de conexión:', err.message)); 
+.catch(err => console.error('✖ Error de conexión:', JSON.stringify(err)));
   
 module.exports = conexion; 
