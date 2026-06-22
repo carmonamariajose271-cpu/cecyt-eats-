@@ -2,23 +2,14 @@ require('dotenv').config();
 const mysql = require('mysql2/promise');
 
 const conexion = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT) || 3306,
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'cecyt_eats',
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 
   waitForConnections: true,
   connectionLimit: 2,
 
-  // 🔥 ESTO ES LO QUE TE FALTA
-  ssl: {
-    rejectUnauthorized: false
-  }
+  ssl: null   // 👈 ESTA LÍNEA ES LA CLAVE
 });
-
-conexion.getConnection()
-  .then(() => console.log('✔ Conectado a MySQL'))
-  .catch(err => console.error('✖ Error de conexión:', JSON.stringify(err)));
-
-module.exports = conexion;
