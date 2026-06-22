@@ -2,13 +2,19 @@ require('dotenv').config();
 const mysql = require('mysql2/promise');
 
 const conexion = mysql.createPool({
-  host:     process.env.DB_HOST     || 'localhost',
-  port:     parseInt(process.env.DB_PORT) || 3306,
-  user:     process.env.DB_USER     || 'root',
+  host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT) || 3306,
+  user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME     || 'cecyt_eats',
+  database: process.env.DB_NAME || 'cecyt_eats',
+
   waitForConnections: true,
   connectionLimit: 2,
+
+  // 🔥 ESTO ES LO QUE TE FALTA
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 conexion.getConnection()
